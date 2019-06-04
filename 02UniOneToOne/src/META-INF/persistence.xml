@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <persistence-unit name="jpa">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+       <!--  <class>com.lnt.Employee</class> -->
+        <!-- <class>com.vastinfo.User</class>
+        <exclude-unlisted-classes /> -->
+        <properties>
+        	<property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+            <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+            <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
+            <property name="hibernate.connection.username" value="system"/>
+            <property name="hibernate.connection.password" value="123456789"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+           
+        </properties>
+    </persistence-unit>
+</persistence>
